@@ -1,10 +1,10 @@
 terraform {
-  backend "s3" {
-    region         = "us-east-1"
-    dynamodb_table = "terraform-up-and-running-locks"
-    key            = "tf-state/terraform.tfstate"
-    bucket         = "cc-tf-remote-backend"
-    encrypt        = true
+  backend "local" {
+   # region         = "us-east-1"
+   # dynamodb_table = "terraform-up-and-running-locks"
+    #key            = "tf-state/terraform.tfstate"
+   # bucket         = "cc-tf-remote-backend"
+   # encrypt        = true
   }
   required_version = ">=0.13.0"
   required_providers {
